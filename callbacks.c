@@ -1,5 +1,8 @@
 #include <stdint.h>
 
+// can't be static
+int test_global = 42;
+
 typedef void (*rust_callback)(void*, int32_t);
 void* cb_target;
 rust_callback cb;
