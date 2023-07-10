@@ -10,7 +10,7 @@ extern "C" fn callback(target: *mut RustObject, a: i32) {
     }
 }
 
-#[link(name = "callbacks", kind = "static")]
+#[link(name = "callbacks")]
 extern "C" {
     fn register_callback(target: *mut RustObject, cb: extern "C" fn(*mut RustObject, i32)) -> i32;
     fn trigger_callback();
